@@ -4,7 +4,6 @@
 	"version": "1.0.0",
 	"displayName": "CCB Snippets",
 	"publisher": "slushman",
-	"icon": "images/react.png",
 	"galleryBanner": {
 	  "theme": "light"
 	},
