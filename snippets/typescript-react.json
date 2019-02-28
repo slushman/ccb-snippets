@@ -1,0 +1,85 @@
+{
+	"reactTypeScriptClassComponent": {
+	  "prefix": "rtcc",
+	  "body": [
+      "import React from 'react';",
+      "",
+      "type ${1:${classPropsTypeName}} = {",
+      "  ${2:${typePropName}}: ${3:${typePropType}}",
+      "};",
+      "",
+      "class ${4:${TM_FILENAME_BASE}} extends React.Component<${1:${classPropsTypeName}}> {",
+      "  render() {",
+      "    return (",
+      "      <div>",
+      "        $0",
+      "     </div>",
+      "   );",
+      "  }",
+      "}",
+      "",
+      "export default ${4:${TM_FILENAME_BASE}};"
+    ],
+	  "description": "Creates a TypeScript React component class."
+  },
+  "reactTypeScriptClassComponentWithState": {
+	  "prefix": "rtccs",
+	  "body": [
+      "import React from 'react';",
+      "",
+      "type ${1:${classPropsTypeName}} = {",
+      "  ${2:${typePropName}}: ${3:${typePropType}}",
+      "};",
+      "",
+      "",
+      "type ${4:${classStateTypeName}} = {",
+      "  ${5:${typeStateName}}: ${6:${typeStateType}}",
+      "};",
+      "",
+      "class ${7:${TM_FILENAME_BASE}} extends React.Component<${1:${classPropsTypeName}}, ${4:${classStateTypeName}}> {",
+      "",
+      "  state: ${4:${classStateTypeName}} = {",
+      "    $8",
+      "  };",
+      "",
+      "  render() {",
+      "    return (",
+      "      <div>",
+      "        $0",
+      "     </div>",
+      "   );",
+      "  }",
+      "}",
+      "",
+      "export default ${7:${TM_FILENAME_BASE}};"
+    ],
+	  "description": "Creates a TypeScript React component class."
+	},
+  "reactTypeScriptClickHandler": {
+		"prefix": "rtch",
+		"body": [
+      "${1:methodName} = ( event: React.MouseEvent<HTMLElement> ) => {",
+      "  $0",
+      "};"
+    ],
+		"description": "Creates an asynchronous function."
+  },
+  "reactTypeScriptPropType": {
+		"prefix": "rtpt",
+		"body": [
+      "export type ${1:typePropsName} = {",
+      "  ${2:typePropName}: ${3:typePropNameType}",
+      "};"
+    ],
+		"description": "Creates an asynchronous function."
+  },
+  "reactTypeScriptStateType": {
+		"prefix": "rtst",
+		"body": [
+      "export type ${1:typeStateName} = {",
+      "  ${2:typeStateName}: ${3:typeStateNameType}",
+      "};"
+    ],
+		"description": "Creates an asynchronous function."
+  }
+}

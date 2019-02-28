@@ -1,0 +1,68 @@
+{
+  "reactReduxClassComponent": {
+	  "prefix": "rrcc",
+	  "body": [
+      "import React, { Component } from 'react';",
+      "import { connect } from 'react-redux';",
+      "",
+      "class ${1:${TM_FILENAME_BASE}} extends Component {",
+      "  render() {",
+      "    return (",
+      "      <div>",
+      "        $0",
+      "     </div>",
+      "   );",
+      "  }",
+      "}",
+      "",
+      "const mapStateToProps = (state) => {",
+      "  return {",
+      "    ${2:${statePropName}}: state.${2:${statePropName}},",
+      "  };",
+      "};",
+      "",
+      "export default connect( mapStateToProps )( ${1:${TM_FILENAME_BASE}} );"
+    ],
+	  "description": "Creates a React component class with ES6 module system."
+	},
+  "reduxMapStateToProps": {
+	  "prefix": "rmstp",
+	  "body": [
+      "const mapStateToProps = (state) => {",
+      "  return {",
+      "    ${1:${propName}}: state.${1:${propName}},",
+      "  };",
+      "};"
+    ],
+	  "description": "Creates a mapStateToProps const."
+	},
+	"reduxMapDispatchToProps": {
+	  "prefix": "rmdtp",
+	  "body": [
+      "const mapDispatchToProps = (dispatch) => {",
+      "  return {",
+      "    ${1:${functionName}}: () => dispatch( { type: '${2:${functionConst}}' }),",
+      "  };",
+      "};"
+    ],
+	  "description": "Creates a mapDispatchToProps const."
+	},
+	"reduxMapDispatchToPropsBindActionCreators": {
+	  "prefix": "rmdbac",
+	  "body": [
+      "const mapDispatchToProps = (dispatch) => bindActionCreators({",
+      "  ${1:${functionName}}: () => ${2:${function}},",
+      "}, dispatch );"
+    ],
+	  "description": "Creates a mapDispatchToProps with bindActionCreators."
+	},
+	"reduxMapDispatchToPropsObject": {
+	  "prefix": "rmdtpo",
+	  "body": [
+      "const mapDispatchToProps = {",
+      "  ${1:${functionName}},",
+      "};"
+    ],
+	  "description": "Creates a mapDispatchToProps object."
+	}
+}

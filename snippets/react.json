@@ -1,0 +1,141 @@
+{
+	"reactClassComponent": {
+	  "prefix": "rcc",
+	  "body": [
+      "import React, { Component } from 'react';",
+      "",
+      "class ${1:${TM_FILENAME_BASE}} extends Component {",
+      "  render() {",
+      "    return (",
+      "      <div>",
+      "        $0",
+      "     </div>",
+      "   );",
+      "  }",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}};"
+    ],
+	  "description": "Creates a React component class with ES6 module system."
+	},
+	"reactClassComponentPropTypes": {
+		"prefix": "rccp",
+		"body": [
+      "import React, { Component } from 'react';",
+      "import PropTypes from 'prop-types';",
+      "",
+      "class ${1:${TM_FILENAME_BASE}} extends Component {",
+      "",
+      "  static propTypes = {",
+      "    ",
+      "  };",
+      "",
+      "  static defaultProps = {",
+      "    ",
+      "  };",
+      "",
+      "  state = {",
+      "    ",
+      "  };",
+      "",
+      "  render() {",
+      "    return (",
+      "      <div>",
+      "        $0",
+      "      </div>",
+      "    );",
+      "  }",
+      "}",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}};",
+      ""
+    ],
+		"description": "Creates a React component class with PropTypes, state, and ES6 module system."
+	},
+	"reactComponentDidMount": {
+		"prefix": "cdm",
+		"body": [
+      "componentDidMount() {",
+      "  $0",
+      "}"
+    ],
+		"description": "Creates an empty componentDidMount method."
+	},
+	"reactComponentDidUnmount": {
+		"prefix": "cdu",
+		"body": [
+      "componentDidUnmount() {",
+      "  $0",
+      "}"
+    ],
+		"description": "Creates an empty componentDidUnmount method."
+	},
+	"reactStateHook": {
+		"prefix": "rsh",
+		"body": [
+      "const [ ${1:variableName}, set${2:capsVariableName} ] = useState( ${2:defaultValue} );"
+    ],
+		"description": "Creates a React state hook."
+  },
+  "reactContextHook": {
+		"prefix": "rch",
+		"body": [
+      "const ${1:variableName} = useContext( ${2:contextName} );"
+    ],
+		"description": "Creates a React state hook."
+  },
+  "reactUseEffect": {
+		"prefix": "rue",
+		"body": [
+      "useEffect( () => {",
+      "  $0",
+      "} );"
+    ],
+		"description": "Creates a React state hook."
+  },
+  "reactAsyncFunction": {
+		"prefix": "rfa",
+		"body": [
+      "const ${1:variableName} = async () => {",
+      "  $0",
+      "};"
+    ],
+		"description": "Creates an asynchronous function."
+  },
+  "reactAsyncMethod": {
+		"prefix": "rma",
+		"body": [
+      "${1:variableName} = async () => {",
+      "  $0",
+      "};"
+    ],
+		"description": "Creates an asynchronous method."
+  },
+  "reactFunction": {
+		"prefix": "rf",
+		"body": [
+      "const ${1:variableName} = () => {",
+      "  $0",
+      "};"
+    ],
+		"description": "Creates an asynchronous function."
+  },
+  "reactMethod": {
+		"prefix": "rm",
+		"body": [
+      "${1:variableName} = () => {",
+      "  $0",
+      "};"
+    ],
+		"description": "Creates an asynchronous method."
+  },
+  "reactSetState": {
+		"prefix": "rss",
+		"body": [
+      "this.setState({",
+      "  $0",
+      "});"
+    ],
+		"description": "Creates a a call to setState."
+  }
+}
