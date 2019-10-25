@@ -1,0 +1,26 @@
+{
+	"awaitNewAwait": {
+	  "prefix": "awa",
+	  "body": [
+      "export const ${1:awaitName} = () =>",
+      "  async (dispatch) => {",
+      "    $0",
+      "  };",
+      "",
+      ""
+    ],
+	  "description": "Creates a new await."
+  },
+  "awaitTest": {
+	  "prefix": "awa",
+	  "body": [
+      "describe('#${1:conditionDescription}', () => {",
+      "  test('${2:testDescription}', async () => {",
+      "    $0",
+      "  });",
+      "});",
+      ""
+    ],
+	  "description": "Creates a new await jest test block."
+  }
+}

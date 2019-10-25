@@ -1,7 +1,7 @@
 {
-	"name": "CCBSnippets",
-	"description": "Code snippets for used by CCB",
-	"version": "1.1",
+	"name": "ccbsnippets",
+	"description": "Code snippets for CCB Developers",
+	"version": "1.2",
 	"displayName": "CCB Snippets",
 	"publisher": "slushman",
 	"galleryBanner": {
@@ -37,12 +37,28 @@
 				"path": "./snippets/redux.json"
 			},
 			{
-				"language": "typecript",
-				"path": "./snippets/typescript-react.json"
+				"language": "javascript",
+				"path": "./snippets/jest.json"
 			},
 			{
-				"language": "typecriptreact",
-				"path": "./snippets/typescript-react.json"
+				"language": "javascriptreact",
+				"path": "./snippets/jest.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/sagas.json"
+			},
+			{
+				"language": "javascriptreact",
+				"path": "./snippets/sagas.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/awaits.json"
+			},
+			{
+				"language": "javascriptreact",
+				"path": "./snippets/awaits.json"
 			}
 	  ]
 	}

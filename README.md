@@ -4,5 +4,5 @@
 
 ---
 
-This extension contains code snippets used by CCB for [Reactjs][react]. Derived from the [vscode-react][vscode-react] package.
+This extension contains code snippets used by CCB for [Reactjs][react], Redux, Redux-Sagas, and Jest. Derived from the [vscode-react][vscode-react] package.
 

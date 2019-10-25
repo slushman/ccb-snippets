@@ -14,128 +14,82 @@
       "  }",
       "}",
       "",
-      "export default ${1:${TM_FILENAME_BASE}};"
-    ],
-	  "description": "Creates a React component class with ES6 module system."
-	},
-	"reactClassComponentPropTypes": {
-		"prefix": "rccp",
-		"body": [
-      "import React, { Component } from 'react';",
-      "import PropTypes from 'prop-types';",
-      "",
-      "class ${1:${TM_FILENAME_BASE}} extends Component {",
-      "",
-      "  static propTypes = {",
-      "    ",
-      "  };",
-      "",
-      "  static defaultProps = {",
-      "    ",
-      "  };",
-      "",
-      "  state = {",
-      "    ",
-      "  };",
-      "",
-      "  render() {",
-      "    return (",
-      "      <div>",
-      "        $0",
-      "      </div>",
-      "    );",
-      "  }",
-      "}",
-      "",
       "export default ${1:${TM_FILENAME_BASE}};",
       ""
     ],
-		"description": "Creates a React component class with PropTypes, state, and ES6 module system."
+	  "description": "Creates a React class component."
 	},
-	"reactComponentDidMount": {
-		"prefix": "cdm",
+  "reactFunctionalComponent": {
+    "prefix": "rfc",
+    "body": [
+      "import React, { memo } from 'react';",
+      "",
+      "const ${1:${TM_FILENAME_BASE}} = () => {",
+      "  return (",
+      "    $0",
+      " );",
+      "};",
+      "",
+      "export default memo(${1:${TM_FILENAME_BASE}};)",
+      ""
+    ],
+	  "description": "Creates a memoized, functional React component."
+  },
+  "reactUseCallback": {
+		"prefix": "rhucb",
 		"body": [
-      "componentDidMount() {",
+      "const ${1:variableName} = useCallback(() => {",
       "  $0",
-      "}"
+      "}, []);"
     ],
-		"description": "Creates an empty componentDidMount method."
-	},
-	"reactComponentDidUnmount": {
-		"prefix": "cdu",
-		"body": [
-      "componentDidUnmount() {",
-      "  $0",
-      "}"
-    ],
-		"description": "Creates an empty componentDidUnmount method."
-	},
-	"reactStateHook": {
-		"prefix": "rsh",
-		"body": [
-      "const [ ${1:variableName}, set${2:capsVariableName} ] = useState( ${2:defaultValue} );"
-    ],
-		"description": "Creates a React state hook."
+		"description": "Creates a React useCallback hook."
   },
   "reactContextHook": {
-		"prefix": "rch",
+		"prefix": "rhuc",
 		"body": [
-      "const ${1:variableName} = useContext( ${2:contextName} );"
+      "const ${1:variableName} = useContext(${2:contextName});"
     ],
-		"description": "Creates a React state hook."
+		"description": "Creates a React useContext hook."
   },
   "reactUseEffect": {
-		"prefix": "rue",
+		"prefix": "rhue",
 		"body": [
       "useEffect( () => {",
       "  $0",
-      "} );"
+      "}, []);"
+    ],
+		"description": "Creates a React useEffect hook."
+  },
+  "reactUseMemo": {
+		"prefix": "rhum",
+		"body": [
+      "const ${1:variableName} = useMemo(() => ({",
+      "  $0",
+      "}), []);"
+    ],
+		"description": "Creates a React useMemo hook."
+  },
+  "reactUseSelector": {
+		"prefix": "rhuse",
+		"body": [
+      "const ${1:variableName} = useSelector($0);"
+    ],
+		"description": "Creates a React Redux useSelector hook."
+  },
+	"reactStateHook": {
+		"prefix": "rhus",
+		"body": [
+      "const [${1:variableName}, set${2:capsVariableName}] = useState(${2:defaultValue});"
     ],
 		"description": "Creates a React state hook."
   },
   "reactAsyncFunction": {
-		"prefix": "rfa",
+		"prefix": "raf",
 		"body": [
       "const ${1:variableName} = async () => {",
       "  $0",
       "};"
     ],
 		"description": "Creates an asynchronous function."
-  },
-  "reactAsyncMethod": {
-		"prefix": "rma",
-		"body": [
-      "${1:variableName} = async () => {",
-      "  $0",
-      "};"
-    ],
-		"description": "Creates an asynchronous method."
-  },
-  "reactFunction": {
-		"prefix": "rf",
-		"body": [
-      "const ${1:variableName} = () => {",
-      "  $0",
-      "};"
-    ],
-		"description": "Creates an asynchronous function."
-  },
-  "reactMethod": {
-		"prefix": "rm",
-		"body": [
-      "${1:variableName} = () => {",
-      "  $0",
-      "};"
-    ],
-		"description": "Creates an asynchronous method."
-  },
-  "reactSetState": {
-		"prefix": "rss",
-		"body": [
-      "this.setState({",
-      "  $0",
-      "});"
-    ],
-		"description": "Creates a a call to setState."
   }
 }

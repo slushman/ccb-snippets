@@ -1,0 +1,49 @@
+{
+	"sagaNewSaga": {
+	  "prefix": "sns",
+	  "body": [
+      "import { call, put, select } from 'redux-saga/effects';",
+      "",
+      "export function* ${1:sagaName}Saga() {",
+      "  $0",
+      "}",
+      ""
+    ],
+	  "description": "Creates a new Redux Saga."
+  },
+  "sagaExpectSaga": {
+	  "prefix": "ses",
+	  "body": [
+      "describe('#${1:sagaName}', () => {",
+      "  test('${2:testDescription}', () => (",
+      "    expectSaga(${1:sagaName})",
+      "      .withState([])",
+      "      .provide([])",
+      "      .run()",
+      "  ));",
+      "});",
+      ""
+    ],
+	  "description": "Creates a new expect saga test statement."
+  },
+  "sagaExpectSagaFile": {
+	  "prefix": "sesf",
+	  "body": [
+      "import { expectSaga } from 'redux-saga-test-plan';",
+      "import { call, put, select } from 'redux-saga/effects';",
+      "",
+      "import { ${1:sagaName} } from '${2:sagaLocation}';",
+      "",
+      "describe('#${1:sagaName}', () => {",
+      "  test('${2:testDescription}', () => (",
+      "    expectSaga(${1:sagaName})",
+      "      .withState([])",
+      "      .provide([])",
+      "      .run()",
+      "  ));",
+      "});",
+      ""
+    ],
+	  "description": "Creates a new saga test file."
+  }
+}

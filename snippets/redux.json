@@ -4,65 +4,133 @@
 	  "body": [
       "import React, { Component } from 'react';",
       "import { connect } from 'react-redux';",
+      "import { createStructuredSelector } from 'reselect';",
+      "",
+      "const mapState = () => createStructuredSelector({",
+      "  $0",
+      "});",
+      "",
+      "const mapDispatch = (dispatch, props) => ({",
+      "  ",
+      "});",
       "",
       "class ${1:${TM_FILENAME_BASE}} extends Component {",
       "  render() {",
       "    return (",
-      "      <div>",
-      "        $0",
-      "     </div>",
-      "   );",
+      "      ",
+      "    );",
       "  }",
       "}",
       "",
-      "const mapStateToProps = (state) => {",
-      "  return {",
-      "    ${2:${statePropName}}: state.${2:${statePropName}},",
-      "  };",
+      "export default connect(mapState, mapDispatch)(${1:${TM_FILENAME_BASE}});",
+      ""
+    ],
+	  "description": "Creates a connect React class component."
+  },
+  "reactReduxFunctionalComponent": {
+	  "prefix": "rrfc",
+	  "body": [
+      "import React, { Component } from 'react';",
+      "import { connect } from 'react-redux';",
+      "import { createStructuredSelector } from 'reselect';",
+      "",
+      "const mapState = () => createStructuredSelector({",
+      "  $0",
+      "});",
+      "",
+      "const mapDispatch = (dispatch, props) => ({",
+      "  ",
+      "});",
+      "",
+      "const ${1:${TM_FILENAME_BASE}} = () => {",
+      "  return (",
+      "    $0",
+      " );",
       "};",
       "",
-      "export default connect( mapStateToProps )( ${1:${TM_FILENAME_BASE}} );"
+      "export default connect(mapState, mapDispatch)(memo(${1:${TM_FILENAME_BASE}}));",
+      ""
     ],
-	  "description": "Creates a React component class with ES6 module system."
+	  "description": "Creates a connected, memoized, functional React component."
 	},
   "reduxMapStateToProps": {
 	  "prefix": "rmstp",
 	  "body": [
-      "const mapStateToProps = (state) => {",
-      "  return {",
-      "    ${1:${propName}}: state.${1:${propName}},",
-      "  };",
-      "};"
+      "const mapState = () => createStructuredSelector({",
+      "  $0",
+      "});"
     ],
-	  "description": "Creates a mapStateToProps const."
+	  "description": "Creates a mapState const."
 	},
 	"reduxMapDispatchToProps": {
 	  "prefix": "rmdtp",
 	  "body": [
-      "const mapDispatchToProps = (dispatch) => {",
-      "  return {",
-      "    ${1:${functionName}}: () => dispatch( { type: '${2:${functionConst}}' }),",
-      "  };",
+      "const mapDispatch = (dispatch, props) => {",
+      "  $0",
       "};"
     ],
-	  "description": "Creates a mapDispatchToProps const."
-	},
-	"reduxMapDispatchToPropsBindActionCreators": {
-	  "prefix": "rmdbac",
+	  "description": "Creates a mapDispatch const."
+  },
+  "reduxNewSelector": {
+	  "prefix": "rns",
 	  "body": [
-      "const mapDispatchToProps = (dispatch) => bindActionCreators({",
-      "  ${1:${functionName}}: () => ${2:${function}},",
-      "}, dispatch );"
+      "export const ${1:selectorName} = () => createSelector(",
+      "  $0",
+      ");"
     ],
-	  "description": "Creates a mapDispatchToProps with bindActionCreators."
-	},
-	"reduxMapDispatchToPropsObject": {
-	  "prefix": "rmdtpo",
-	  "body": [
-      "const mapDispatchToProps = {",
-      "  ${1:${functionName}},",
-      "};"
+	  "description": "Creates a mapDispatch const."
+  },
+  "reduxConnectedIndexFile": {
+    "prefix": "rcif",
+    "body": [
+      "import { connect } from 'react-redux';",
+      "import { createStructuredSelector } from 'reselect';",
+      "",
+      "import ${1:componentName} from './${1:componentName}';",
+      "",
+      "const mapState = () => createStructuredSelector({",
+      "  $0",
+      "});",
+      "",
+      "const mapDispatch = (dispatch, props) => ({",
+      "  ",
+      "});",
+      "",
+      "export default connect(mapState, mapDispatch)(${1:componentName});",
+      ""
     ],
-	  "description": "Creates a mapDispatchToProps object."
-	}
+    "description": "Creates the index file for a connected component."
+  },
+  "reduxIndexFile": {
+    "prefix": "rif",
+    "body": [
+      "import ${1:componentName} from './${1:componentName}';",
+      "import connect from './${2:connectFileName}';",
+      "",
+      "export default connect(${1:componentName});",
+      ""
+    ],
+    "description": "Creates the index file for a component with the connect statement in a different file."
+  },
+  "reduxConnectFile": {
+    "prefix": "rcf",
+    "body": [
+      "import { connect } from 'react-redux';",
+      "import { createStructuredSelector } from 'reselect';",
+      "",
+      "import ${1:componentName} from './${1:componentName}';",
+      "",
+      "const mapState = () => createStructuredSelector({",
+      "  $0",
+      "});",
+      "",
+      "const mapDispatch = (dispatch, props) => ({",
+      "  ",
+      "});",
+      "",
+      "export default connect(mapState, mapDispatch);",
+      ""
+    ],
+    "description": "Creates a stand-alone connect file."
+  }
 }

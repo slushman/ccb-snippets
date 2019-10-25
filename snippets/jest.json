@@ -1,0 +1,95 @@
+{
+	"jestDescribe": {
+	  "prefix": "jd",
+	  "body": [
+      "describe('${1:description}', () => {",
+      "  $0",
+      "});",
+      ""
+    ],
+	  "description": "Creates a Jest describe block."
+  },
+  "jestTest": {
+	  "prefix": "jt",
+	  "body": [
+      "test('${1:description}', () => {",
+      "  $0",
+      "});",
+      ""
+    ],
+	  "description": "Creates a Jest test block."
+  },
+  "jestDescribeAndTest": {
+	  "prefix": "jdt",
+	  "body": [
+      "describe('${1:conditionDescription}', () => {",
+      "  test('${2:testDescription}', () => {",
+      "    $0",
+      "  });",
+      "});",
+      ""
+    ],
+	  "description": "Creates a Jest describe block with a test block inside."
+  },
+  "jestMountFactoryFile": {
+	  "prefix": "jmff",
+    "body": [
+      "import { mountFactory } from 'testUtils';",
+      "",
+      "import ${1:componentName} from './${1:componentName}';",
+      "",
+      "const defaultProps = {};",
+      "const defaultActions = [];",
+      "const factory = mountFactory(${1:componentName}, defaultProps)",
+      "",
+      "describe('#${1:componentName}', () => {",
+      "  test('${2:testDescription}', () => {",
+      "    const wrapper = factory();",
+      "    wrapper.debug();",
+      "  });",
+      "});",
+      ""
+    ],
+	  "description": "Creates a new jest test file with a mount factory."
+  },
+  "jestShallowFactoryNativeFile": {
+	  "prefix": "jsfnf",
+    "body": [
+      "import { shallowFactory } from 'testUtils';",
+      "",
+      "import ${1:componentName} from './${1:componentName}';",
+      "",
+      "const defaultProps = {};",
+      "const factory = shallowFactory(${1:componentName}, defaultProps)",
+      "",
+      "describe('#${1:componentName}', () => {",
+      "  test('${2:testDescription}', () => {",
+      "    const wrapper = factory();",
+      "    wrapper.debug();",
+      "  });",
+      "});",
+      ""
+    ],
+	  "description": "Creates a new Jest test file with a shallow factory for native."
+  },
+  "jestShallowFactoryWebFile": {
+	  "prefix": "jsfwf",
+    "body": [
+      "import { getRenderer } from 'test/enzymeHelpers';",
+      "",
+      "import ${1:componentName} from './${1:componentName}';",
+      "",
+      "const defaultProps = {};",
+      "const factory = getRenderer(${1:componentName}, defaultProps)",
+      "",
+      "describe('#${1:componentName}', () => {",
+      "  test('${2:testDescription}', () => {",
+      "    const wrapper = factory();",
+      "    wrapper.debug();",
+      "  });",
+      "});",
+      ""
+    ],
+	  "description": "Creates a new Jest test file with a shallow factory for web app."
+  }
+}
