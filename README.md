@@ -1,6 +1,6 @@
 #CCB Snippets
 
-## VS COde snippets for React, Redux, PHP, etc.
+## VS Code snippets for React, Redux, Sagas, Jest, awaits, etc.
 
 ---
 
