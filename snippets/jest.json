@@ -1,6 +1,6 @@
 {
 	"jestDescribe": {
-	  "prefix": "jd",
+	  "prefix": "ccbjd",
 	  "body": [
       "describe('${1:description}', () => {",
       "  $0",
@@ -10,7 +10,7 @@
 	  "description": "Creates a Jest describe block."
   },
   "jestTest": {
-	  "prefix": "jt",
+	  "prefix": "ccbjt",
 	  "body": [
       "test('${1:description}', () => {",
       "  $0",
@@ -20,7 +20,7 @@
 	  "description": "Creates a Jest test block."
   },
   "jestDescribeAndTest": {
-	  "prefix": "jdt",
+	  "prefix": "ccbjdt",
 	  "body": [
       "describe('${1:conditionDescription}', () => {",
       "  test('${2:testDescription}', () => {",
@@ -32,7 +32,7 @@
 	  "description": "Creates a Jest describe block with a test block inside."
   },
   "jestMountFactoryFile": {
-	  "prefix": "jmff",
+	  "prefix": "ccbjmff",
     "body": [
       "import { mountFactory } from 'testUtils';",
       "",
@@ -53,7 +53,7 @@
 	  "description": "Creates a new jest test file with a mount factory."
   },
   "jestShallowFactoryNativeFile": {
-	  "prefix": "jsfnf",
+	  "prefix": "ccbjsfnf",
     "body": [
       "import { shallowFactory } from 'testUtils';",
       "",
@@ -73,7 +73,7 @@
 	  "description": "Creates a new Jest test file with a shallow factory for native."
   },
   "jestShallowFactoryWebFile": {
-	  "prefix": "jsfwf",
+	  "prefix": "ccbjsfwf",
     "body": [
       "import { getRenderer } from 'test/enzymeHelpers';",
       "",

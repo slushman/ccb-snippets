@@ -1,6 +1,6 @@
 {
 	"reactClassComponent": {
-	  "prefix": "rcc",
+	  "prefix": "ccbrcc",
 	  "body": [
       "import React, { Component } from 'react';",
       "",
@@ -20,9 +20,9 @@
 	  "description": "Creates a React class component."
 	},
   "reactFunctionalComponent": {
-    "prefix": "rfc",
+    "prefix": "ccbrfc",
     "body": [
-      "import React, { memo } from 'react';",
+      "import React from 'react';",
       "",
       "const ${1:${TM_FILENAME_BASE}} = () => {",
       "  return (",
@@ -30,61 +30,61 @@
       " );",
       "};",
       "",
-      "export default memo(${1:${TM_FILENAME_BASE}};)",
+      "export default React.memo(${1:${TM_FILENAME_BASE}};)",
       ""
     ],
 	  "description": "Creates a memoized, functional React component."
   },
   "reactUseCallback": {
-		"prefix": "rhucb",
+		"prefix": "ccbrhucb",
 		"body": [
-      "const ${1:variableName} = useCallback(() => {",
+      "const ${1:variableName} = React.useCallback(() => {",
       "  $0",
       "}, []);"
     ],
 		"description": "Creates a React useCallback hook."
   },
   "reactContextHook": {
-		"prefix": "rhuc",
+		"prefix": "ccbrhuc",
 		"body": [
-      "const ${1:variableName} = useContext(${2:contextName});"
+      "const ${1:variableName} = React.useContext(${2:contextName});"
     ],
 		"description": "Creates a React useContext hook."
   },
   "reactUseEffect": {
-		"prefix": "rhue",
+		"prefix": "ccbrhue",
 		"body": [
-      "useEffect( () => {",
+      "React.useEffect( () => {",
       "  $0",
       "}, []);"
     ],
 		"description": "Creates a React useEffect hook."
   },
   "reactUseMemo": {
-		"prefix": "rhum",
+		"prefix": "ccbrhum",
 		"body": [
-      "const ${1:variableName} = useMemo(() => ({",
+      "const ${1:variableName} = React.useMemo(() => ({",
       "  $0",
       "}), []);"
     ],
 		"description": "Creates a React useMemo hook."
   },
   "reactUseSelector": {
-		"prefix": "rhuse",
+		"prefix": "ccbrhuse",
 		"body": [
-      "const ${1:variableName} = useSelector($0);"
+      "const ${1:variableName} = ReactRedux.useSelector($0);"
     ],
 		"description": "Creates a React Redux useSelector hook."
   },
 	"reactStateHook": {
-		"prefix": "rhus",
+		"prefix": "ccbrhus",
 		"body": [
-      "const [${1:variableName}, set${2:capsVariableName}] = useState(${2:defaultValue});"
+      "const [${1:variableName}, set${2:capsVariableName}] = React.useState(${2:defaultValue});"
     ],
 		"description": "Creates a React state hook."
   },
   "reactAsyncFunction": {
-		"prefix": "raf",
+		"prefix": "ccbraf",
 		"body": [
       "const ${1:variableName} = async () => {",
       "  $0",

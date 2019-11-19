@@ -1,6 +1,6 @@
 {
 	"awaitNewAwait": {
-	  "prefix": "awa",
+	  "prefix": "ccbawa",
 	  "body": [
       "export const ${1:awaitName} = () =>",
       "  async (dispatch) => {",
@@ -12,7 +12,7 @@
 	  "description": "Creates a new await."
   },
   "awaitTest": {
-	  "prefix": "awa",
+	  "prefix": "ccbawat",
 	  "body": [
       "describe('#${1:conditionDescription}', () => {",
       "  test('${2:testDescription}', async () => {",

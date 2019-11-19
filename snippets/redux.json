@@ -1,6 +1,6 @@
 {
   "reactReduxClassComponent": {
-	  "prefix": "rrcc",
+	  "prefix": "ccbrrcc",
 	  "body": [
       "import React, { Component } from 'react';",
       "import { connect } from 'react-redux';",
@@ -28,7 +28,7 @@
 	  "description": "Creates a connect React class component."
   },
   "reactReduxFunctionalComponent": {
-	  "prefix": "rrfc",
+	  "prefix": "ccbrrfc",
 	  "body": [
       "import React, { Component } from 'react';",
       "import { connect } from 'react-redux';",
@@ -54,7 +54,7 @@
 	  "description": "Creates a connected, memoized, functional React component."
 	},
   "reduxMapStateToProps": {
-	  "prefix": "rmstp",
+	  "prefix": "ccbrmstp",
 	  "body": [
       "const mapState = () => createStructuredSelector({",
       "  $0",
@@ -63,7 +63,7 @@
 	  "description": "Creates a mapState const."
 	},
 	"reduxMapDispatchToProps": {
-	  "prefix": "rmdtp",
+	  "prefix": "ccbrmdtp",
 	  "body": [
       "const mapDispatch = (dispatch, props) => {",
       "  $0",
@@ -72,7 +72,7 @@
 	  "description": "Creates a mapDispatch const."
   },
   "reduxNewSelector": {
-	  "prefix": "rns",
+	  "prefix": "ccbrns",
 	  "body": [
       "export const ${1:selectorName} = () => createSelector(",
       "  $0",
@@ -81,7 +81,7 @@
 	  "description": "Creates a mapDispatch const."
   },
   "reduxConnectedIndexFile": {
-    "prefix": "rcif",
+    "prefix": "ccbrcif",
     "body": [
       "import { connect } from 'react-redux';",
       "import { createStructuredSelector } from 'reselect';",
@@ -102,7 +102,7 @@
     "description": "Creates the index file for a connected component."
   },
   "reduxIndexFile": {
-    "prefix": "rif",
+    "prefix": "ccbrif",
     "body": [
       "import ${1:componentName} from './${1:componentName}';",
       "import connect from './${2:connectFileName}';",
@@ -113,7 +113,7 @@
     "description": "Creates the index file for a component with the connect statement in a different file."
   },
   "reduxConnectFile": {
-    "prefix": "rcf",
+    "prefix": "ccbrcf",
     "body": [
       "import { connect } from 'react-redux';",
       "import { createStructuredSelector } from 'reselect';",
