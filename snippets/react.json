@@ -54,7 +54,7 @@
   "reactUseEffect": {
 		"prefix": "ccbrhue",
 		"body": [
-      "React.useEffect( () => {",
+      "React.useEffect(() => {",
       "  $0",
       "}, []);"
     ],
@@ -91,5 +91,20 @@
       "};"
     ],
 		"description": "Creates an asynchronous function."
-  }
+  },
+  "reactCustomHook": {
+	  "prefix": "ccbrhch",
+	  "body": [
+      "import React from 'react';",
+      "",
+      "export const ${1:${TM_FILENAME_BASE}} () => {",
+      "",
+      "  return {",
+      "",
+      "  }",
+      "};",
+      ""
+    ],
+	  "description": "Creates a custom React hook."
+	}
 }

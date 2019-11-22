@@ -1,25 +1,25 @@
 {
 	"name": "ccbsnippets",
 	"description": "Code snippets for CCB Developers",
-	"version": "1.2.1",
+	"version": "1.2.2",
 	"displayName": "CCB Snippets",
 	"publisher": "slushman",
 	"galleryBanner": {
-	  "theme": "light"
+		"theme": "light"
 	},
 	"license": "SEE LICENSE IN LICENSE.md",
 	"repository": {
-	  "type": "git",
-	  "url": "https://github.com/slushman/ccb-snippets"
+		"type": "git",
+		"url": "https://github.com/slushman/ccb-snippets"
 	},
 	"engines": {
-	  "vscode": "0.10.x"
+		"vscode": "0.10.x"
 	},
 	"categories": [
-	  "Snippets"
+		"Snippets"
 	],
 	"contributes": {
-	  "snippets": [
+		"snippets": [
 			{
 				"language": "javascript",
 				"path": "./snippets/react.json"
@@ -60,6 +60,6 @@
 				"language": "javascriptreact",
 				"path": "./snippets/awaits.json"
 			}
-	  ]
+		]
 	}
 }

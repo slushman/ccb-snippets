@@ -1,3 +1,6 @@
+## [1.2.2] - 2019-11-22
+- Add custom React hook starter.
+
 ## [1.2.1] - 2019-11-19
 - Namespaced all prefixes with 'ccb'
 - Namespaced all react and react-redux hook calls
